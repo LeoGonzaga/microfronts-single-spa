@@ -12,6 +12,7 @@ export const Home = (): JSX.Element => {
 
   return (
     <div>
+      <h1>Micro front 1</h1>
       <p>{counter}</p>
 
       <button onClick={handleChangeValue}>Add</button>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function Root(props) {
-  const [counter, setCounter] = useState<number>(null);
+  const [counter, setCounter] = useState<number>(0);
   console.log("Rerender");
 
   useEffect(() => {
