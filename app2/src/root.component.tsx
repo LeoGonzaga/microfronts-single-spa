@@ -1,3 +1,24 @@
+import { useEffect, useState } from "react";
+
 export default function Root(props) {
-  return <section>{props.name} is deu bom!</section>;
+  const [counter, setCounter] = useState<number>(null);
+  console.log("Rerender");
+
+  useEffect(() => {
+    window.addEventListener("@mfe/react-counter", (event: any) => {
+      setCounter(event.detail);
+    });
+
+    return () => {
+      window.removeEventListener("@mfe/react-counter", (event: any) => {
+        setCounter(event.detail);
+      });
+    };
+  }, []);
+
+  return (
+    <section>
+      <h1>Microfront sendo utilizado como parcel</h1> {counter}
+    </section>
+  );
 }

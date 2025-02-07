@@ -1,3 +1,9 @@
+import Home from "./screens/Home";
+
 export default function Root(props) {
-  return <section>{props.name} is pqp!</section>;
+  return (
+    <section>
+      <Home />
+    </section>
+  );
 }
